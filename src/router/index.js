@@ -24,46 +24,99 @@ export default new Router({
       path: '/task',
       component: Layout,
       redirect: '/task/startTask',
-      hidden: false,
+      meta: {
+        title: '项目管理'
+      },
       children: [
         {
           path: '/task/startTask',
+          name: 'startTask',
           component: () => import('@/views/task/NewTask'),
           meta: {
             title: '项目立项'
           }
-        },
+        }
+      ]
+    },
+    {
+      path: '/task',
+      component: Layout,
+      meta: {
+        title: '项目管理'
+      },
+      children: [
         {
           path: '/task/checkTask',
+          name: 'taskCheck',
           component: () => import('@/views/task/NewTaskCheck'),
           meta: {
             title: '项目审批'
           }
-        },
+        }
+      ]
+    },
+    {
+      path: '/task',
+      component: Layout,
+      meta: {
+        title: '项目管理'
+      },
+      children: [
         {
           path: '/task/changeTask',
+          name: 'taskChange',
           component: () => import('@/views/task/TaskChange'),
           meta: {
             title: '变动项目'
           }
-        },
+        }
+      ]
+    },
+    {
+      path: '/task',
+      component: Layout,
+      meta: {
+        title: '项目管理'
+      },
+      children: [
         {
           path: '/task/checkChangeTask',
+          name: 'taskChangeCheck',
           component: () => import('@/views/task/TaskChangeCheck'),
           meta: {
             title: '项目变动审批'
           }
-        },
+        }
+      ]
+    },
+    {
+      path: '/task',
+      component: Layout,
+      meta: {
+        title: '项目管理'
+      },
+      children: [
         {
           path: '/task/stopTask',
-          component: () => import('@/views/task/NewTaskCheck'),
+          name: 'stopTask',
+          component: () => import('@/views/task/StopTask'),
           meta: {
             title: '已停止项目'
           }
-        },
+        }
+      ]
+    },
+    {
+      path: '/task',
+      component: Layout,
+      meta: {
+        title: '项目管理'
+      },
+      children: [
         {
           path: '/task/changeStopTask',
-          component: () => import('@/views/task/NewTaskCheck'),
+          name: 'stopTaskCheck',
+          component: () => import('@/views/task/StopTaskCheck'),
           meta: {
             title: '项目停止审批'
           }
@@ -101,7 +154,9 @@ export default new Router({
           path: 'department',
           name: 'department',
           component: () => import('@/views/admin/department/index'),
-          meta: {title: '部门管理'}
+          meta: {
+            title: '部门管理'
+          }
         }
       ]
     },

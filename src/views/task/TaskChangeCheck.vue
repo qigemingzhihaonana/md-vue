@@ -156,7 +156,7 @@
 <script>
 import { queryTask, fetchTask, backTask, agreeTask } from '@/api/newTaskCheck'
 export default {
-    name: '项目变动审批',
+    name: 'taskChangeCheck',
     data() {
         return {
             tableData: [],

@@ -144,7 +144,7 @@
 <script>
 import { queryTask, fetchTask, backTask, agreeTask } from '@/api/newTaskCheck'
 export default {
-    name: '项目审批',
+    name: 'taskCheck',
     data() {
         return {
             tableData: [],
@@ -178,7 +178,7 @@ export default {
     },
     methods: {
         onsubmit() {
-            const taskName = `立项审批`
+            const taskName = "立项审批"
             queryTask(taskName).then(response => {
                 console.log(response)
                 if (response.data.data.length === 1 || response.data.data.length === undefined) {

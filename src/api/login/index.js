@@ -10,7 +10,7 @@ export function login (uid, pwd) {
     pwd
   }
   return axios({
-    url: '/selectUserMenuList',
+    url: '/login/selectUserMenuList',
     method: 'post',
     params: data
   })

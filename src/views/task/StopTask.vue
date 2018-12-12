@@ -144,7 +144,7 @@
 <script>
 import { queryTask,fetchTask, backTask, agreeTask } from '@/api/newTaskCheck'
 export default {
-    name: '已停止项目',
+    name: 'stopTask',
     data() {
         return {
             tableData: [],

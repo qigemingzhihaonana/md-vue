@@ -204,7 +204,7 @@
 <script>
 import { taskquery, queryTask, addTask, editTask, stopTask, taskStep, complateTask } from '@/api/NewTask'
 export default {
-    name: '项目立项',
+    name: 'startTask',
     data() {
         return {
             taskId: undefined,

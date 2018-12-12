@@ -25,6 +25,7 @@ export function backTask (id) {
  * 同意项目通过
  */
 export function agreeTask (id) {
+  const 
   return axios({
     url: '/busBitem/completeTask',
     method: 'post',
@@ -32,13 +33,13 @@ export function agreeTask (id) {
   })
 }
 
-export function queryTask (name) {
+export function queryTask (taskName) {
   const data = {
-    name
+    taskName
   }
   return axios({
     url: '/activiti/getTaskList',
     method: 'post',
-    data
+    params: data
   })
 }

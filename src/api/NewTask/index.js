@@ -72,13 +72,10 @@ export function stopTask (id) {
  * 查询任务进度
  */
 export function taskStep (procInstd) {
-  const data = {
-    procInstd
-  }
   return axios({
     url: '/busBitem/getProjectStep',
     method: 'post',
-    data
+    data: procInstd
   })
 }
 
